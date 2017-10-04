@@ -1,0 +1,244 @@
+/*color styles*/
+.brown {
+  background-color: #54494b;
+}
+.white {
+  background-color: #fcf8e3;
+}
+.green {
+  background-color: #91c7b1;
+}
+.red {
+  background-color: #b33951;
+}
+.cream {
+  background-color: #eae3c5;
+}
+.cream-dark {
+  background-color: #D2C383;
+}
+/*styling basics*/
+.fill {
+  width: 100%;
+}
+.left {
+  float: left;
+}
+.clear {
+  clear: both;
+}
+.block {
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.hide {
+  display: none;
+}
+/*button overrides*/
+.form-control:focus {
+  color: #464a4c;
+  border-color: #b33951;
+  outline: 0;
+  }
+.btn-primary {
+  background-color: #274e3e;
+  color: #eae3c5;
+  border-color: #438369;
+}
+.btn-primary:hover {
+  background-color: #438369;
+  border-color: #274e3e;
+}
+/*sets display none property*/
+.create, .gameId, .reset, .join, .start, /**/.mainGame,/**/.chat, .btnWin {
+	display: none;
+}
+/*sets game font*/
+html {
+  height: 100%;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+   background: linear-gradient(#54494b, black);
+   height: 100%;
+}
+input::placholder {
+  color: lightgray;
+}
+/*modal styling*/
+.modal-header {
+  background-color: #274e3e;
+}
+.modal-header h5 {
+  text-align: center;
+}
+.modal-title {
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  /*font-size: 3rem;*/
+  background-color: #274e3e;
+  color: #eae3c5;
+}
+.img-container {
+  /*width: 350px;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgray;*/
+}
+.btn-enter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #eae3c5;
+  border-color: #D2C383;
+  color: #274e3e;
+  font-weight: bold;
+}
+.btn-enter:hover {
+  background-color: #D2C383;
+  border-color: #eae3c5;
+}
+.modal-footer {
+  background-color: #274e3e;
+  color: #eae3c5;
+}
+
+.main.container {
+    border-radius: 6px;
+}
+/*login*/
+.welcome {
+  text-align: center;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #274e3e;
+  color: #eae3c5;
+}
+.btn-submit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #274e3e;
+  color: #eae3c5;
+}
+.hi {
+  color: #eae3c5;
+  background: #274e3e;
+  padding: 5px;
+  margin: 0;
+  border-radius: 3px;
+}
+/*the game*/
+.mainGame .card.white {
+  border: 1px solid #b33951;
+  color: #54494b;
+}
+
+.game-row .card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.letter {
+  width: 20px;
+  margin: 1px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(136,136,136,1);
+  transition: box-shadow .2s ease-in-out;
+  font-size: 85%;
+}
+.letter:hover {
+  box-shadow:1px 1px 4px rgba(136,136,136,.1);
+}
+.button-space {
+  width: 5em;
+}
+.letter-button {
+
+}
+.letter-button-color {
+  background-color: #eae3c5;
+  border-radius: 3px;
+  border: none;
+}
+/*messageBoard*/
+.messageBoard {
+  border: 1px solid #b33951;
+	height: 150px;
+	overflow-y: auto;
+}
+.messageBoard > p {
+  margin-bottom: .25rem;
+  color: #54494b;
+}
+.messageBoard .card-title {
+  color: lightgray;
+}
+.notify {
+  text-align: center;
+}
+/*here when i got here*/
+
+.test {
+	border: 2px solid #8a6d3b;
+}
+.mapStyles {
+  border: 1px solid #b33951;
+  margin: 0 0 1rem 0;
+  border-radius: 3px;
+}
+#foodList {
+  height: 150px;
+  overflow-y: scroll;
+  background: white;
+  border: 1px solid #b33951;
+  margin: 0 0 1rem 0;
+  border-radius: 3px;
+}
+#foodList ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+#foodList>ul>li:nth-child(odd) {
+  background-color: #E7F2EE;
+}
+#foodList>ul>li.foodLink {
+    font-size: 80%;
+    padding-bottom: 5px;
+    list-style: none;
+    cursor: pointer;
+    padding-left: 5px;
+}
+#foodList>ul>li:last-child {
+  padding-bottom: 3px;
+}
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query since this is the default in Bootstrap */
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .letter {
+    width: 2em;
+    margin: 2px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(136,136,136,1);
+    transition: box-shadow .2s ease-in-out;
+    font-size: 95%;
+  }
+  .letter-button.button-space {
+    width: 10rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { ... }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { ... }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { ... }

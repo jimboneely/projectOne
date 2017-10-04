@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="./styles/styles.css" />
+	<title>Project1</title>
+</head>
+
+<body class='p-3 brown'>
+
+	<div id="myModal" class="container-fluid modal fade">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content cream">
+				<div class="modal-header">
+					<p class="modal-title">When you want to go eat and you don't want to think about where.</p>
+				</div>
+				<div class="modal-body">
+					<div class="img-container mb-2 "><img src="./images/Asset_04.png" class="img-fluid block mx-auto" alt="Thought for Food"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary btn-enter pl-5 pr-5" data-dismiss="modal">Enter</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main container test p-3 cream">
+
+		<div class="instructions"><p class="welcome">Please enter your name so we can get started</p></div>
+		<div class="container login-container mb-3">
+			<form class="form-inline col-sm-12 login">
+					<input type="text" class="form-control block mx-auto col-sm-12 mb-3 name" placeholder="Enter your name">
+					<br />
+					<button type="submit" class="btn btn-primary btn-submit">Submit</button>
+			</form>
+		</div>
+
+		<div class="container mb-2 create">
+			<button type="button" class="btn btn-primary btnCreate block mx-auto">Create Game</button>
+		</div>
+
+		<div class="container mb-2 join">
+			<form class="form-inline">
+				<button type="submit" class="btn btn-primary btnJoin block mx-auto mb-3">Join Game</button>
+			</form>
+		</div>
+
+		<div class="container mb-2 start">
+			<button type="button" class="btn btn-primary btnStart block mx-auto mb-3">Start Game</button>
+		</div>
+
+		<div class="container mb-2 reset">
+			<button type="button" class="btn btn-primary btnReset block mx-auto">Reset</button>
+		</div>
+
+		<div class="container mb-2 notify">
+			<div class="alert alert-warning" role="alert"></div>
+		</div>
+
+		<!-- =======================================================================================
+			MAIN GAME BEGINS
+		======================================================================================= -->
+
+		<div class="mainGame container">
+			<div class="row game-row">
+				<div class='card col-sm-10 d-block text-center mb-2 pt-3 pb-3 white'>
+					<h3 class='card-title'><strong>Word to Guess</strong></h3>
+					<div class='card-body'>
+						<div class="pause"></div>
+						<h3 class='word-blanks'></h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="row keyboard justify-content-center text-center mb-3">
+				<div class="card col-sm-10 pt-3 pb-3 white">
+					<div class=" row1"></div>
+					<div class=" row2"></div>
+					<div class=" row3"></div>
+					<div class=" row4"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- sound files -->
+		<audio class="sound" preload="auto">
+		    <source src="assets/mmm.mp3"></source>
+		</audio>
+		<audio class="wrong" preload="auto">
+		    <source src="assets/wrong.wav"></source>
+		</audio>
+		<audio class="jingle" preload="auto">
+		    <source src="assets/jingle.mp3"></source>
+		</audio>
+
+		<!-- =======================================================================================
+			MAIN GAME ENDS
+		======================================================================================= -->
+
+		<div class="foodData block mx-auto col-sm-10">
+			<div id="map" class="col-sm-12 block mx-auto"></div>
+			<div id="foodList"></div>
+		</div>
+
+		<div class="container col-sm-10 mb-2 chat">
+			<div class="card messageBoard mb-2 pt-1 pl-2 pr-2 pb-1">
+				<div class="card-title">Something on your mind?</div>
+			</div>
+			<form class="form-inline">
+				<div class="input-group col-sm-12 pl-0 pr-0">
+					<input type="text" class="form-control form-control-sm newMessage" placeholder="Say something...">
+					<span class="input-group-btn">
+						<button type="submit" class="btn btn-sm btn-primary btnSend">Send</button>
+					</span>
+				</div>
+			</form>
+		</div>
+
+	</div>
+
+	<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh8G52VJ26LanxyxfOvKbseB8GlOgO2Pw&libraries=places&callback=initMap" async defer></script>
+	<script src="app.js"></script>
+</body>
+
+</html>
