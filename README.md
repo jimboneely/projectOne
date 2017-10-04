@@ -5,7 +5,7 @@ Contributors: James, Mike, Rolando, Viet
 
 =================================================================
 
-Use this link to run the app: https://nguyendviet.github.io/Project1/
+Use this link to run the app: https://jimboneely.github.io/Project1/
 
 =================================================================
 
